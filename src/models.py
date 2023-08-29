@@ -47,8 +47,6 @@ class Media(Base):
 
 class Comment(Base):
     __tablename__ = 'comment'
-       # Here we define columns for the table person
-    # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
     comment_text = Column(String(250), nullable=False)
     author_id = Column(Integer, ForeignKey('user.id'))
